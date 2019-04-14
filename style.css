@@ -1,6 +1,54 @@
 * {
-    border: solid 1px #ff6f6f;
+    /*
+    border: solid 1px #ff6f6f;*/
     margin: 0;
     padding: 0;
     font-family: 'Heebo', sans-serif;
+}
+
+
+nav {
+    overflow: visible; /* hidden */
+    position: fixed;
+    top: 0;
+    right: -101px;
+    background-color: blueviolet;
+    width: 100px;
+    height: 100%;
+    z-index: 998;
+}
+
+#menuButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px;
+    width: 40px;
+    z-index: 999;
+}
+
+nav ul {
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: inline-block;
+    width: 450px;
+    position: relative;
+    right: 175px;
+    top: 300px;
+    overflow: visible;
+}
+
+nav ul li {
+    margin-left: 30px;
+    float: left;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
 }

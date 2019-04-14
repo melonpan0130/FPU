@@ -13,72 +13,34 @@
     <script>
         $(function() {
             $height = $(window).height();
-            $("#section1, #section2").css("height", $height);
+            $width = $(window).width();
+            $("#section1, #section2").css({"height": $height});
 
             $("#menuButton").on("click", function() {
                 console.log("hello!");
-                $("header").toggleClass("open");
-                if ($("header").hasClass("open")) {
-                    $("header").animate({right:"0px"}, 300);
+                $("nav").toggleClass("open");
+                if ($("nav").hasClass("open")) {
+                    $("nav").animate({right:"0px"}, 300);
                 } else {
-                    $("header").animate({right:"-100px"}, 300);
+                    $("nav").animate({right:"-100px"}, 300);
                 }
             });
         });
     </script>
     <style>
-        header {
-            overflow: visible; /* hidden */
-            position: fixed;
-            top: 0;
-            right: -101px;
-            background-color: blueviolet;
-            width: 100px;
-            height: 100%;
-        }
+        
 
-        #menuButton {
-            position: fixed;
-            top: 0;
-            right: 0;
-            margin: 30px;
-            width: 40px;
-            z-index: 2;
-        }
-
-        header ul {
-            -ms-transform: rotate(90deg);
-            -moz-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-            display: inline-block;
-            width: 400px;
-            position: relative;
-            right: 150px;
-            top: 300px;
-            overflow: visible;
-        }
-
-        header ul li {
-            margin-left: 30px;
-            float: left;
-            list-style-type: none;
-        }
-
-        header ul li a {
-            color: white;
-            font-size: 20px;
-            font-weight: bolder;
-            text-decoration: none;
+        #section1, #section2 {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
         }
 
         #section1 {
             background-image: url("img/closetDoor.jpg");
-            background-size: cover;
-            background-position: center;
         }
 
-        #section1 h1 {
+        #section1 h1, #section2 h1 {
             font-size: 60px;
             text-align: center;
             color: white;
@@ -86,8 +48,6 @@
         
         #section2 {
             background-image: url("img/clothes.jpg");
-            background-size: cover;
-            background-position: center;
         }
 
     </style>
@@ -95,19 +55,21 @@
 
 <body>
     <img id="menuButton" src="img/menu.png">    
-    <header>
+    <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="introduction.html">INTRODUCTION</a></li>
             <li><a href="develop.html">DEVELOP</a></li>
         </ul>
-    </header>
-    <div id="section1">
-        <h1>Do you want <br/ >to be free from ..</h1>
-    </div>
-    <div id="section2">
+    </nav>
+    <section>
+        <article id="section1">
+            <h1>Do you want <br/ >to be free from ..</h1>
+        </article>
+        <article id="section2">
         <h1>Always want to be free from washing clothes.</h1>
-    </div>
+    </article>
+    </section>
     <footer>
         
     </footer>

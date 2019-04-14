@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>DEVELOP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <script>
@@ -25,13 +25,13 @@
                 $("#week1").on("mouseover", function() {
                     $("week1 h1").animate({color:"white"}, 300);
                 }).on("mouseout", function() {
-
+                    
                 })
             });
         </script>
         <style>
             header {
-                background-image: url('img/develop/header.jpg');
+                background-image: url('../img/develop/header.jpg');
                 background-size: cover;
                 height: 300px;
                 position: relative;
@@ -47,7 +47,8 @@
             }
 
             section {
-                height: 500px;
+                height: 1%;
+                overflow: visible;
                 background-color: #45468a;
                 padding: 5%;
             }
@@ -64,6 +65,10 @@
                 position: absolute;
                 bottom: 0;
             }
+
+            section img {
+                width: 30%;
+            }
         </style>
     </head>
     <body>
@@ -76,12 +81,14 @@
             </ul>
         </nav>
         <header>
-            <h1>DEVELOP</h1>
+            <h1>DEVELOP - 1 week</h1>
         </header>
         <section>
-            <div id="week1" onclick="location.href = 'develop/week1.html'">
-                <h1>1차시</h1>
-            </div>
+            <h1>스케치하기</h1>
+            <p>구체적인 구상을 위해 스케치하였다. 파트별로 내용을 나누고 </p>
+            <img src="../img/develop/week-1/sketch.jpg">
+            <img src="../img/develop/week-1/sketch2.jpg">
+            <img src="../img/develop/week-1/sketch3.jpg">
         </section>
 
     </body>
