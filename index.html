@@ -6,30 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FPU</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-            $height = $(window).height();
-            $width = $(window).width();
-            $("#section1, #section2").css({"height": $height});
-
-            $("#menuButton").on("click", function() {
-                console.log("hello!");
-                $("nav").toggleClass("open");
-                if ($("nav").hasClass("open")) {
-                    $("nav").animate({right:"0px"}, 300);
-                } else {
-                    $("nav").animate({right:"-100px"}, 300);
-                }
-            });
-        });
-    </script>
+    <script src="js/menuButton.js"></script>
     <style>
-        
-
         #section1, #section2 {
             background-size: cover;
             background-position: center;
@@ -50,6 +32,12 @@
             background-image: url("img/clothes.jpg");
         }
 
+        #section2 div {
+            width: 20%;
+            height: 100%;
+            background-color: #C2D2C4;
+            opacity: 0.5;
+        }
     </style>
 </head>
 
@@ -64,11 +52,12 @@
     </nav>
     <section>
         <article id="section1">
-            <h1>Do you want <br/ >to be free from ..</h1>
+            <h1>Do you want <br>to be free from ..</h1>
         </article>
         <article id="section2">
-        <h1>Always want to be free from washing clothes.</h1>
-    </article>
+            <div><h1>Always want to be free from washing clothes.</h1></div>
+            
+        </article>
     </section>
     <footer>
         

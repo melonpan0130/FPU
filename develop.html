@@ -5,30 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>DEVELOP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <script>
-            $(function() {
-                $height = $(window).height();
-                $width = $(window).width();
-                
-                $("#menuButton").on("click", function() {
-                    $("nav").toggleClass("open");
-                    if ($("nav").hasClass("open")) {
-                        $("nav").animate({right:"0px"}, 300);
-                    } else {
-                        $("nav").animate({right:"-100px"}, 300);
-                    }
-                });
-
-                $("#week1").on("mouseover", function() {
-                    $("week1 h1").animate({color:"white"}, 300);
-                }).on("mouseout", function() {
-
-                })
-            });
-        </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/menuButton.js"></script>
+        
         <style>
             header {
                 background-image: url('img/develop/header.jpg');
@@ -48,21 +31,37 @@
 
             section {
                 height: 500px;
-                background-color: #45468a;
+                background-color: #F4F3E1;
                 padding: 5%;
             }
 
             #week1 {
                 width: 30%;
                 height: 300px;
+                overflow: hidden;
                 position: relative;
                 background-image: url('img/develop/week-1/sketch.jpg');
                 background-size: cover;
+                transition: 0.5s;
+            }
+
+            #week1:hover {
+                background-image: none;
+                background-color: #DB8A8A;
             }
 
             #week1 h1 {
+                display: none;
+                font-size: 50px;
+                font-style: italic;
                 position: absolute;
-                bottom: 0;
+                bottom: -15px;
+            }
+
+            #week1:hover h1 {
+                display: inline;
+                color: white;
+                transition: 0.1s;
             }
         </style>
     </head>
@@ -80,6 +79,7 @@
         </header>
         <section>
             <div id="week1" onclick="location.href = 'develop/week1.html'">
+                <div></div>
                 <h1>1차시</h1>
             </div>
         </section>
