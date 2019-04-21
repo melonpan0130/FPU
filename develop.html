@@ -6,20 +6,25 @@
         <title>DEVELOP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/menuButton.js"></script>
-        
+        <script>
+            $(function () {
+
+            });
+        </script>
         <style>
+            body { background-color: #F4F3E1; }
             header {
                 background-image: url('img/develop/header.jpg');
                 background-size: cover;
                 height: 300px;
                 position: relative;
             }
-
             header h1 {
                 color: white;
                 font-size: 100px;
@@ -27,42 +32,82 @@
                 margin: 0 100px;
                 bottom: 0;
                 font-style: italic;
+                opacity: 1;
             }
 
             section {
-                height: 500px;
+                height: 1%;
+                overflow: hidden;
                 background-color: #F4F3E1;
-                padding: 5%;
+                padding: 5% 10%;
             }
 
-            #week1 {
-                width: 30%;
+            #week1, #week2, #week3, #week4 {
+                float: left;
+                width: 33.3%;
                 height: 300px;
                 overflow: hidden;
                 position: relative;
-                background-image: url('img/develop/week-1/sketch.jpg');
                 background-size: cover;
                 transition: 0.5s;
             }
 
-            #week1:hover {
-                background-image: none;
-                background-color: #DB8A8A;
+            #week1 {
+                background-image: url('img/develop/week-1/sketch.jpg');
             }
 
-            #week1 h1 {
-                display: none;
+            #week2 {
+                background-image: url('img/develop/week-2/color.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .inner+h1 {
+                color: white;
                 font-size: 50px;
                 font-style: italic;
                 position: absolute;
                 bottom: -15px;
+                opacity: 0;
+            }
+            
+            .inner {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
             }
 
-            #week1:hover h1 {
-                display: inline;
-                color: white;
-                transition: 0.1s;
+            #week1>div{
+                background-color: #DB8A8A;
+
             }
+
+            #week2>div {
+                background-color: rgb(136, 98, 27);
+            }
+            
+            #week1:hover h1 {
+                opacity: 1;
+                transition: 0.5s;
+                transition-delay: 0.5s;
+            }
+
+            #week1:hover div{
+                opacity: 0.7;
+                transition: 0.5s;
+            }
+
+            #week2:hover h1 {
+                opacity: 1;
+                transition: 0.5s;
+                transition-delay: 0.5s;
+            }
+
+            #week2:hover div {
+                opacity: 0.7;
+                transition: 0.5s;
+            }
+
         </style>
     </head>
     <body>
@@ -79,8 +124,12 @@
         </header>
         <section>
             <div id="week1" onclick="location.href = 'develop/week1.html'">
-                <div></div>
+                <div class="inner"></div>
                 <h1>1차시</h1>
+            </div>
+            <div id="week2" onclick="location.href = 'develop/week2.html'">
+                <div class="inner"></div>
+                <h1>2차시</h1>
             </div>
         </section>
 

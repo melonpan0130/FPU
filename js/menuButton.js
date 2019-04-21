@@ -1,8 +1,4 @@
 $(function() {
-    $height = $(window).height();
-    $width = $(window).width();
-    $("#section1, #section2").css({"height": $height});
-
     $("#menuButton").on("click", function() {
         $("nav").toggleClass("open");
         if ($("nav").hasClass("open")) {
