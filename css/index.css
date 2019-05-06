@@ -1,0 +1,97 @@
+
+body {
+    font-family: 'Playfair Display';
+}
+#section1, #section2 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+}
+
+#section1 {
+    background-image: url("../img/closetDoor.jpg");
+}
+
+#section2 {
+    background-image: url("../img/clothes.jpg");
+    overflow: hidden;
+}
+#section1 h1, #section2 h1 {
+    font-size: 60px;
+    color: white;
+    position: relative;
+    z-index: 9999
+}
+
+#section1 div:first-child, #section2 div:first-child {
+    background-color: #C2D2C4;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+}
+
+#section2 div:first-child {
+    background-color: #F4F3E1;
+    z-index: 1;
+}
+
+#section1 div:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section2 h1{
+    color: #0A384A;
+    top: 100px;
+    left: 100px;
+}
+
+#section2 li {
+    color: #0A384A;
+    font-size: 25px;
+    position: relative;
+    top: 150px;
+    left: 100px;
+    z-index: 9999;
+}
+
+#section3 {
+    background-color: #609691;
+    text-align: center;
+    position: relative;
+}
+
+#section3 video {
+    filter: grayscale(100%);
+}
+
+#section3>div {
+    position: relative;
+    height: 100%;
+    background-color: rgba(96, 150, 145, 0.5);
+}
+#section3>div>div {
+    font-size: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#section3 button {
+    border: none;
+    border-radius: 20px;
+    font-size: 30px;
+    font-family: Heebo;
+    font-weight: bold;
+    background-color: #C2D2C4;
+    color: #0A384A;
+    padding: 20px;
+    margin: 10px;
+}

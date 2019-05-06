@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FPU</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -17,92 +18,20 @@
             $height = $(window).height();
             $width = $(window).width();
             $("section>div").css({"height": $height});
+
+            $("#section1 div:nth-child(2) h1").animate({height:"300px"})
+            $("video").prop("volume", 0.0);
         });
     </script>
     <style>
-        body {
-            font-family: 'Playfair Display';
-        }
-        #section1, #section2 {
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            font-weight: bold;
-            position: relative;
-        }
-
-        #section1 {
-            background-image: url("img/closetDoor.jpg");
-        }
-        
-        #section2 {
-            background-image: url("img/clothes.jpg");
-            overflow: hidden;
-        }
-        #section1 h1, #section2 h1 {
-            font-size: 60px;
-            color: white;
-            position: relative;
-            z-index: 9999
-        }
-
-        #section1 div:first-child, #section2 div:first-child {
-            background-color: #C2D2C4;
-            height: 100%;
-            width: 100%;
-            opacity: 0.5;
-            position: absolute;
-            top: 0;
-        }
-        
-        #section2 div:first-child {
-            background-color: #F4F3E1;
-            z-index: 1;
-        }
-
-        #section1 h1 {
-            text-align: center;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        #section2 h1{
-            color: #0A384A;
-            top: 100px;
-            left: 100px;
-        }
-
-        #section2 li {
-            color: #0A384A;
-            font-size: 25px;
-            position: relative;
-            top: 150px;
-            left: 100px;
-            z-index: 9999;
-        }
-
         #section3 {
-            background-color: #609691;
-            text-align: center;
-            position: relative;
+            overflow: hidden;
+            
         }
-
-        #section3 div {
-            font-size: 40px;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        #section3 button {
-            border: none;
-            border-radius: 20px;
-            font-size: 30px;
-            font-family: Heebo;
-            font-weight: bold;
-            background-color: #C2D2C4;
-            color: #0A384A;
-            padding: 20px;
-            margin: 10px;
+        #section3 video {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -119,7 +48,8 @@
     <section>
         <div id="section1">
             <div></div>
-            <h1>Do you want <br>to be free from laundry</h1>
+            <div><h1>Do you want to be free from laundry</h1>
+            <h1>ddd</h1></div>
         </div>
 
         <div id="section2">
@@ -133,9 +63,12 @@
         </div>
 
         <div id="section3">
+            <video autoplay loop width="100%" volume="0.0" src="img/Styler.mp4"></video>
             <div>
-                <h1>And now is use FPU!</h1>
-                <button onclick="location.href='introduction.html'">Go to Buy!</button>
+                <div>   
+                    <h1>And now is use FPU!</h1>
+                    <button onclick="location.href='introduction.html'">Go to Buy!</button>
+                </div>
             </div>
             
         </div>

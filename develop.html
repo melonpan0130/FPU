@@ -41,8 +41,7 @@
                 background-color: #F4F3E1;
                 padding: 5% 10%;
             }
-
-            #week1, #week2, #week3, #week4 {
+            section>div {
                 float: left;
                 width: 33.3%;
                 height: 300px;
@@ -57,6 +56,11 @@
             }
 
             #week2 {
+                background-image: url('img/develop/week-2/color.JPG');
+                background-position: center;
+            }
+
+            #week3 {
                 background-image: url('img/develop/week-2/color.JPG');
                 background-position: center;
             }
@@ -84,24 +88,17 @@
                 background-color: rgb(136, 98, 27);
             }
             
-            #week1:hover h1 {
+            #week3>div {
+                background-color: #A1E856;
+            }
+
+            section>div:hover h1 {
                 opacity: 1;
                 transition: 0.5s;
                 transition-delay: 0.5s;
             }
 
-            #week1:hover div{
-                opacity: 0.7;
-                transition: 0.5s;
-            }
-
-            #week2:hover h1 {
-                opacity: 1;
-                transition: 0.5s;
-                transition-delay: 0.5s;
-            }
-
-            #week2:hover div {
+            section>div:hover div{
                 opacity: 0.7;
                 transition: 0.5s;
             }
@@ -128,6 +125,10 @@
             <div id="week2" onclick="location.href = 'develop/week2.html'">
                 <div class="inner"></div>
                 <h1>2차시</h1>
+            </div>
+            <div id="week3" onclick="location.href = 'develop/week3.html'">
+                <div class="inner"></div>
+                <h1>3차시</h1>
             </div>
         </section>
 
