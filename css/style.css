@@ -1,9 +1,7 @@
 * {
-    /*
-    border: solid 1px #ff6f6f;*/
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display'; 
+    font-family: 'Playfair Display' 'Heebo';
 }
 
 
@@ -12,7 +10,6 @@ nav {
     position: fixed;
     top: 0;
     right: -101px;
-    /*background-color: #609691;*/
     background-color: #C2D2C4;
     width: 100px;
     height: 100%;
@@ -48,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(27, 73, 12);
     font-size: 20px;
     font-weight: bolder;
     text-decoration: none;

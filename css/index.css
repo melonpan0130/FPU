@@ -14,6 +14,7 @@ body {
     background-image: url("../img/closetDoor.jpg");
 }
 
+
 #section2 {
     background-image: url("../img/clothes.jpg");
     overflow: hidden;
@@ -22,9 +23,10 @@ body {
     font-size: 60px;
     color: white;
     position: relative;
-    z-index: 9999
+    z-index: 9999;
 }
 
+/* color filter */
 #section1 div:first-child, #section2 div:first-child {
     background-color: #C2D2C4;
     height: 100%;
@@ -39,6 +41,7 @@ body {
     z-index: 1;
 }
 
+/* content make be center 
 #section1 div:nth-child(2) {
     width: 100%;
     position: absolute;
@@ -46,6 +49,25 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+*/
+#section1 div:nth-child(n+2){
+    height: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#section1 div:nth-last-child(2) {
+    position: relative;
+}
+
+#text1{
+    position: absolute;
+    bottom: 0;
+}
+
+#text1 {
+    transform: translateY(100%);
 }
 
 #section2 h1{
@@ -67,10 +89,14 @@ body {
     background-color: #609691;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 #section3 video {
     filter: grayscale(100%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #section3>div {
@@ -92,6 +118,11 @@ body {
     font-weight: bold;
     background-color: #C2D2C4;
     color: #0A384A;
-    padding: 20px;
+    padding: 30px 40px;
     margin: 10px;
+}
+
+#section3 button:hover {
+    color: #C2D2C4;
+    background-color: #0A384A;
 }

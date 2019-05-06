@@ -14,25 +14,33 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/menuButton.js"></script>
     <script>
+        var text = ['text1', 'text2', 'text3', 'text4'];
+        var textCount = 1;
         $(function() {
             $height = $(window).height();
             $width = $(window).width();
-            $("section>div").css({"height": $height});
-
-            $("#section1 div:nth-child(2) h1").animate({height:"300px"})
             $("video").prop("volume", 0.0);
+            $("section>div").css({"height": $height});
+            
+            
+            $("#text1").animate({
+                    transform:"translateY(-100%)"
+                }, 10000, function() {
+                $(this).text(text[++textCount%text.length]).fadeIn(500);
+                //$(this).next().text(text[++textCount%2]).fadeIn(500);
+            });//function(){ loop();});
+            $("#text2").animate({
+                    //height:"300px",
+                    transform:"translateY(-100%)"
+
+                }, 10000, function() {
+                $(this).text(text[++textCount%text.length]).fadeIn(500);
+                //$(this).next().text(text[++textCount%2]).fadeIn(500);
+            });
+
         });
     </script>
     <style>
-        #section3 {
-            overflow: hidden;
-            
-        }
-        #section3 video {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
 </head>
 
@@ -48,8 +56,13 @@
     <section>
         <div id="section1">
             <div></div>
-            <div><h1>Do you want to be free from laundry</h1>
-            <h1>ddd</h1></div>
+            <div>
+                <h1 id="text1">Do you want</h1>    
+            </div>
+            <hr>
+            <div>
+                <h1 id="text2">to be free from laundry</h1>
+            </div>
         </div>
 
         <div id="section2">
