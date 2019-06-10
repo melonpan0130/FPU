@@ -8,39 +8,51 @@
     <title>FPU</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/menuButton.js"></script>
     <script>
-        var text = ['text1', 'text2', 'text3', 'text4'];
+        var text = ['Do you want', 'to be free from laundry?', 'Running the washing machine', '1 hour', 'Hang up the laundry', '1 hour', 'Dry','1 day', 'Folding clothes neatly', '1 hour', 'A total of two hours or so of labor', 'is required.', 'And', 'do this three times a week.'];
         var textCount = 1;
-        $(function() {
-            $height = $(window).height();
-            $width = $(window).width();
-            $("video").prop("volume", 0.0);
-            $("section>div").css({"height": $height});
-            
-            
-            $("#text1").animate({
-                    transform:"translateY(-100%)"
-                }, 1000, function() {
-                $(this).text(text[++textCount%text.length]).fadeIn(500);
-                //$(this).next().text(text[++textCount%2]).fadeIn(500);
-            });//function(){ loop();});
-            $("#text2").animate({
-                    //height:"300px",
-                    transform:"translateY(-100%)"
+        window.onload = function () {
+            text1Animation();
+            setTimeout(() => {
+                text2Animation();
+            }, 500);
+        }
 
-                }, 1000, function() {
-                $(this).text(text[++textCount%text.length]).fadeIn(500);
-                //$(this).next().text(text[++textCount%2]).fadeIn(500);
-            });
+        var loop1, loop2;
 
-        });
+        function text1Animation() {
+            loop1 = setInterval(() => {
+                textCount = ++textCount%text.length;
+                document.getElementById("text1").innerHTML = text[textCount];
+            }, 2000);
+        }
+
+        function text2Animation() {
+            loop2 = setInterval(() => {
+                textCount = ++textCount%text.length;
+                document.getElementById("text2").innerHTML = text[textCount];
+            }, 2000);
+        }
     </script>
     <style>
+        .text1, .text2 {
+            color: white;
+            transition: color 2s;
+            transition-duration: 1s;
+        }
+        .hiddenText1 {
+            color: rgba(255, 255, 255, 0);
+        }
+
+        .hiddenText2 {
+            color: rgba(255, 255, 255, 0);
+        }
+
     </style>
 </head>
 
@@ -48,7 +60,7 @@
     <img id="menuButton" src="img/menu.png">    
     <nav>
         <ul>
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="#section1">HOME</a></li>
             <li><a href="introduction.html">INTRODUCTION</a></li>
             <li><a href="develop.html">DEVELOP</a></li>
         </ul>
@@ -57,11 +69,10 @@
         <div id="section1">
             <div></div>
             <div>
-                <h1 id="text1">Do you want</h1>    
+                <h1 id="text1" class="text1">Do you want</h1>
             </div>
-            <hr>
             <div>
-                <h1 id="text2">to be free from laundry</h1>
+                <h1 id="text2" class="text2">to be free from laundry?</h1>
             </div>
         </div>
 
